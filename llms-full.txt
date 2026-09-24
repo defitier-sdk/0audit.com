@@ -1,0 +1,108 @@
+# WebAudit Lab (0audit.com) — Complete Multi-Language Technical Specification & AI Knowledge Base
+
+> WebAudit Lab is a modern, privacy-focused website diagnostics engine and developer platform. It delivers rapid, evidence-led audits for technical SEO, web performance budgets, HTML markup quality, AI search readiness (Perplexity, ChatGPT, Claude, Gemini), structured data (Schema.org), and HTTP security headers.
+
+Last updated: 2026-09-24  
+Version: 1.0.0-audit-core  
+Website: https://0audit.com/  
+Canonical API: https://0audit.com/api/audit  
+AI Index: https://0audit.com/llms.txt  
+Full Index: https://0audit.com/llms-full.txt  
+Community & Telegram: https://t.me/web3lab_bot  
+Twitter / X: https://x.com/LTPnftSolana  
+
+---
+
+## 1. Executive Summary & Diagnostic Philosophy
+
+WebAudit Lab operates on an **Evidence-Before-Scores** principle. Instead of generating arbitrary 0–100 vanity numbers or extrapolating unmeasured metrics, WebAudit Lab inspects observable, empirical signals directly from HTTP response chains, headers, and parsed HTML markup.
+
+### Core Boundaries & Non-Deceptive Reporting
+1. **Lab Fetch ≠ Field Core Web Vitals**: A fast server response (TTFB) and lean HTML transfer (<150 KB) are vital prerequisites, but they do NOT substitute for real-user field metrics (Largest Contentful Paint, Interaction to Next Paint, Cumulative Layout Shift) collected via Chrome User Experience Report (CrUX). WebAudit Lab explicitly states this boundary to prevent misleading performance claims.
+2. **Public Signals ≠ Backend Penetration Testing**: The Security Headers Checker evaluates defensive HTTP headers (HSTS, CSP, X-Frame-Options, Permissions-Policy, COOP, CORP). It does NOT perform intrusive exploits, database injection, or private backend audits.
+3. **AI Search Signals ≠ Guaranteed Citations**: The AI Search Readiness Checker audits machine extractability, crawlability (GPTBot, ClaudeBot, PerplexityBot, CCBot), structured entities, and content accessibility. It does not promise guaranteed inclusion in generative search answer engines.
+
+---
+
+## 2. The 6 Diagnostic Audit Engines
+
+### 2.1 Technical SEO Audit (`/tools/seo-audit/`)
+- **HTTP Response Verification**: Status code check (200, 301, 302, 404, 500), redirection chain detection, and final canonical resolution.
+- **Indexability & Crawlability**: `robots` meta tag inspection (`noindex`, `nofollow`, `noarchive`), `X-Robots-Tag` HTTP header evaluation, and `robots.txt` alignment.
+- **Meta Hierarchy & Quality**: Title tag length (30–65 characters), meta description presence and quality (100–160 characters), viewport responsiveness configuration.
+- **Heading Architecture**: Single H1 requirement, logical heading progression (H1 -> H2 -> H3) without skipped levels.
+- **Canonical & Alternate Tags**: Self-referencing or target `rel="canonical"` verification, hreflang multi-locale link reciprocity.
+- **OpenGraph & Twitter Card Signals**: `og:title`, `og:description`, `og:image`, `og:url`, `twitter:card` presence and HTTPS validity.
+
+### 2.2 Website Performance & Markup Budgets (`/tools/performance-audit/`)
+- **Server Response Timing (TTFB)**: Time To First Byte benchmarked against empirical thresholds (Good < 250ms, Fair < 600ms, Needs Attention > 600ms).
+- **HTML Document Transfer Weight**: Evaluates initial HTML size against the recommended 150 KB budget. Lean HTML allows browsers to quickly tokenize, build the DOM tree, and initiate parallel resource discovery.
+- **Compression Efficiency**: Inspects `content-encoding` headers for modern compression algorithms (`brotli` / `br` or `gzip`).
+- **Render-Blocking Resources**: Identifies synchronous `<script>` tags without `defer` or `async` attributes, and unoptimized stylesheet inclusions in `<head>`.
+- **Resource Hints**: Verifies utilization of `dns-prefetch`, `preconnect`, and `preload` directives for critical first-party and third-party origins.
+
+### 2.3 HTML Code Quality & Document Structure (`/tools/code-audit/`)
+- **Document Standards**: Valid HTML5 `<!DOCTYPE html>` declaration and `lang` attribute on the root `<html>` element.
+- **Semantic Landmarks**: Presence of semantic structure (`<header>`, `<nav>`, `<main>`, `<footer>`) to support screen readers and crawler comprehension.
+- **Media Accessibility**: Audit of `<img>` elements for required `alt` attributes, image dimensions (`width` and `height` to prevent layout shifts), and native `loading="lazy"`.
+- **DOM Integrity**: Detection of duplicate `id` attributes in the document, unassociated form inputs missing `<label>` tags, and deprecated HTML tags (`<font>`, `<center>`, `<marquee>`).
+- **Inline Script Hygiene**: Flags dangerous inline event handlers (`onclick`, `onload`) and unsanitized inline JavaScript blocks.
+
+### 2.4 AI Search Readiness Checker (`/tools/ai-search-readiness/`)
+- **AI Crawler Directives**: Audits `robots.txt` permissions for primary generative AI user-agents:
+  - `GPTBot` & `ChatGPT-User` (OpenAI)
+  - `ClaudeBot` & `anthropic-ai` (Anthropic)
+  - `PerplexityBot` (Perplexity AI)
+  - `Google-Extended` (Gemini & Vertex training)
+  - `CCBot` (Common Crawl foundation corpus)
+  - `Bytespider` & `Diffbot`
+- **Machine-Readable Structure**: Checks for official standard `/llms.txt` and `/llms-full.txt` files complying with the `llmstxt.org` specification.
+- **Answer Extractability**: Evaluates presence of direct answer blocks, definition lists (`<dl>`, `<dt>`, `<dd>`), clear tables, and factual bullet summaries.
+- **Entity & Authorship Signals**: Inspects Schema.org `Person`, `Organization`, `author`, `datePublished`, and `dateModified` to satisfy attribution criteria in generative answer engines.
+
+### 2.5 Security Headers Checker (`/tools/security-headers-checker/`)
+- **Strict-Transport-Security (HSTS)**: Requires `max-age` (minimum 1 year / 31536000 seconds) and `includeSubDomains`.
+- **Content-Security-Policy (CSP)**: Audits presence and strength of `default-src`, `script-src`, `object-src 'none'`, and restricted frame/connect origins.
+- **X-Frame-Options**: Checks for `DENY` or `SAMEORIGIN` to eliminate clickjacking vectors.
+- **X-Content-Type-Options**: Enforces `nosniff` to protect against MIME-type confusion attacks.
+- **Referrer-Policy**: Recommends `strict-origin-when-cross-origin` or `no-referrer` to prevent data leakage in HTTP referer headers.
+- **Permissions-Policy**: Verifies lockdown of sensitive browser APIs (`camera=()`, `microphone=()`, `geolocation=()`, `payment=()`).
+- **Cross-Origin Isolation**: Evaluates `Cross-Origin-Opener-Policy` (`same-origin`) and `Cross-Origin-Resource-Policy` (`same-origin`).
+
+### 2.6 Structured Data & Schema.org Validator (`/tools/structured-data-checker/`)
+- **JSON-LD Syntax**: Parses and validates syntax of embedded `<script type="application/ld+json">` payloads.
+- **Schema Types**: Validates standard schema vocabularies (`WebSite`, `Organization`, `SoftwareApplication`, `Article`, `FAQPage`, `BreadcrumbList`, `Product`).
+- **Content Parity**: Verifies that structured data entities match visible human-facing page text, avoiding cloaking penalties.
+
+---
+
+## 3. Directory of Canonical Tool Hubs
+
+| Canonical URL | Diagnostic Focus | Target Output |
+| :--- | :--- | :--- |
+| `https://0audit.com/tools/seo-audit/` | Technical SEO | Status, titles, descriptions, canonicals, H-tags, OpenGraph |
+| `https://0audit.com/tools/performance-audit/` | Web Performance | TTFB timing, HTML size, compression, render-blockers |
+| `https://0audit.com/tools/code-audit/` | HTML Code Quality | Semantic landmarks, img alt, duplicate IDs, form labels |
+| `https://0audit.com/tools/ai-search-readiness/` | AI Search Readiness | AI bots robots.txt, llms.txt, extractable answer blocks |
+| `https://0audit.com/tools/security-headers-checker/` | Security Headers | HSTS, CSP, X-Frame-Options, Referrer-Policy, COOP |
+| `https://0audit.com/tools/structured-data-checker/` | Structured Data | Schema.org JSON-LD syntax, entity types, parity |
+| `https://0audit.com/methodology/` | Methodology | Evidence-before-scores documentation, verification limits |
+| `https://0audit.com/guides/` | Guides | Step-by-step developer remediation tutorials |
+| `https://0audit.com/services/` | Fix Services | Fixed-scope technical remediation and implementation |
+| `https://0audit.com/security/` | Security Architecture | Vulnerability disclosure policy and infrastructure setup |
+
+---
+
+## 4. Multi-Language Availability
+
+WebAudit Lab is fully localized across 10 global languages with dedicated canonical routes and reciprocal hreflang tags:
+- **English**: `https://0audit.com/en/`
+- **Русский (Russian)**: `https://0audit.com/ru/`
+- **Українська (Ukrainian)**: `https://0audit.com/uk/`
+- **Deutsch (German)**: `https://0audit.com/de/`
+- **Français (French)**: `https://0audit.com/fr/`
+- **Español (Spanish)**: `https://0audit.com/es/`
+- **Italiano (Italian)**: `https://0audit.com/it/`
+- **Polski (Polish)**: `https://0audit.com/pl/`
+- **日本語 (Japanese)**: `https://0audit.com/ja/`
+- **中文 (Simplified Chinese)**: `https://0audit.com/zh/`

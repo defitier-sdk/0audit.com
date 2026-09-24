@@ -1,0 +1,26 @@
+# WebAudit Lab
+
+> WebAudit Lab provides focused, evidence-led website diagnostics for technical SEO, web performance, HTML code quality, AI search readiness, structured data and security headers.
+
+WebAudit Lab analyzes public web pages, checks observable signals against web standards, documents limitations and outlines practical next steps. This file is a curated index for AI agents and LLMs; Google Search does not use llms.txt as a ranking or AI-search requirement.
+
+## Tools
+- [Technical SEO Audit](https://0audit.com/tools/seo-audit/): Crawl signals, HTTP response, metadata, H1/H2 hierarchy, canonicals, language alternates, links and JSON-LD.
+- [Website Performance Audit](https://0audit.com/tools/performance-audit/): Fetch timing, HTML transfer size, potential render blockers and markup budgets. Does not measure field Core Web Vitals.
+- [HTML Code Quality Audit](https://0audit.com/tools/code-audit/): HTML structure, document landmarks, image alternatives, duplicate IDs, form labels and inline handlers. Does not execute private backend code.
+- [AI Search Readiness Checker](https://0audit.com/tools/ai-search-readiness/): Machine readability, crawlability, extractable answers, entities, dates and references. It cannot guarantee citations or inclusion.
+- [Structured Data Checker](https://0audit.com/tools/structured-data-checker/): Schema.org syntax, detected types and visible-content parity. Cannot guarantee rich results.
+- [Security Headers Checker](https://0audit.com/tools/security-headers-checker/): HTTPS, HSTS, CSP, X-Frame-Options, MIME sniffing, Referrer-Policy, Permissions-Policy and COOP/CORP. Not a penetration test.
+
+## Key Resources
+- [Tools Directory](https://0audit.com/tools/): Complete directory of website diagnostic tools.
+- [Diagnostic Methodology](https://0audit.com/methodology/): Evidence-before-scores philosophy and verification boundaries.
+- [Implementation Guides](https://0audit.com/guides/): Technical documentation and guides for fixing web issues.
+- [Fix Services](https://0audit.com/services/): Fixed-scope implementation and remediation services.
+- [Security Architecture](https://0audit.com/security/): Security architecture, privacy policy and vulnerability reporting.
+- [About WebAudit Lab](https://0audit.com/about/): Project background, operator details and mission.
+
+## Optional
+- [Licenses and Third-Party Notices](https://0audit.com/licenses/): Open source licenses and library acknowledgements.
+- [Privacy Policy](https://0audit.com/privacy/): Data handling, logging and privacy guarantees.
+- [Terms of Service](https://0audit.com/terms/): Usage terms and acceptable use policies.

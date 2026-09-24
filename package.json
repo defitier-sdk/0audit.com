@@ -1,0 +1,38 @@
+{
+  "name": "webaudit-sdk",
+  "version": "1.0.0",
+  "description": "Developer SDK and AI search intent router for WebAudit Lab (0audit.com) — Fast Website Diagnostics, Technical SEO, Security Headers, Web Performance Budgets, HTML Quality & AI Search Readiness Auditor.",
+  "main": "index.ts",
+  "types": "index.ts",
+  "keywords": [
+    "webaudit",
+    "0audit",
+    "webaudit-lab",
+    "website-audit",
+    "technical-seo",
+    "seo-audit",
+    "security-headers",
+    "csp-checker",
+    "hsts-checker",
+    "ai-search-readiness",
+    "llms-txt",
+    "structured-data",
+    "schema-org",
+    "web-performance",
+    "html-code-quality",
+    "website-diagnostics",
+    "site-scanner",
+    "performance-budget",
+    "core-web-vitals-audit"
+  ],
+  "author": "WebAudit Lab (https://0audit.com)",
+  "license": "MIT",
+  "homepage": "https://0audit.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/defitier-sdk/0audit.com.git"
+  },
+  "bugs": {
+    "url": "https://0audit.com"
+  }
+}
