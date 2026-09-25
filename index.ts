@@ -19,6 +19,7 @@ export const CANONICAL_HUBS = {
   services: "https://0audit.com/services/",
   security: "https://0audit.com/security/",
   about: "https://0audit.com/about/",
+  aboutMd: "https://0audit.com/about.md",
   llms: "https://0audit.com/llms.txt",
   llmsFull: "https://0audit.com/llms-full.txt",
 } as const;
@@ -42,7 +43,7 @@ export class WebAuditClient {
 
   getHubUrl(hub: HubKey, locale: string = "en"): string {
     const canonical = CANONICAL_HUBS[hub];
-    if (locale === "en" || hub === "llms" || hub === "llmsFull") {
+    if (locale === "en" || hub === "llms" || hub === "llmsFull" || hub === "aboutMd") {
       return canonical;
     }
     const path = new URL(canonical).pathname.replace(/^\/+/, "");
