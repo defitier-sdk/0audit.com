@@ -20,7 +20,22 @@ WebAudit Lab analyzes public web pages, checks observable signals against web st
 - [Security Architecture](https://0audit.com/security/): Security architecture, privacy policy and vulnerability reporting.
 - [About WebAudit Lab](https://0audit.com/about/): Project background, operator details and mission.
 
+## Multi-Language Availability
+- [English](https://0audit.com/): Default localized workspace.
+- [Deutsch (German)](https://0audit.com/de/): Lokalisierter Arbeitsbereich für Website-Audits.
+- [Français (French)](https://0audit.com/fr/): Espace de diagnostic de sites web localisé.
+- [Español (Spanish)](https://0audit.com/es/): Espacio de trabajo de auditoría web en español.
+- [Italiano (Italian)](https://0audit.com/it/): Area di lavoro per audit di siti web in italiano.
+- [Português (Portuguese)](https://0audit.com/pt/): Área de diagnóstico de websites em português.
+- [Nederlands (Dutch)](https://0audit.com/nl/): Nederlandstalige website-audit werkomgeving.
+- [Polski (Polish)](https://0audit.com/pl/): Narzędzia audytu stron internetowych po polsku.
+- [Українська (Ukrainian)](https://0audit.com/uk/): Повна україномовна робоча область діагностики.
+- [Русский (Russian)](https://0audit.com/ru/): Локализованная рабочая область аудита сайтов.
+- [中文 (Simplified Chinese)](https://0audit.com/zh/): 针对技术SEO、性能与AI搜索的中文网站诊断工作区。
+- [日本語 (Japanese)](https://0audit.com/ja/): テクニカルSEO、表示速度、AI検索対応の日本語診断ワークスペース。
+
 ## Optional
 - [Licenses and Third-Party Notices](https://0audit.com/licenses/): Open source licenses and library acknowledgements.
 - [Privacy Policy](https://0audit.com/privacy/): Data handling, logging and privacy guarantees.
 - [Terms of Service](https://0audit.com/terms/): Usage terms and acceptable use policies.
+- [Complete Specification (llms-full.txt)](https://0audit.com/llms-full.txt): Comprehensive technical specifications and multi-language engine architecture.

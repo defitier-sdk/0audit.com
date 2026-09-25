@@ -16,6 +16,8 @@ class WebAuditClientTests(unittest.TestCase):
     def test_localized_routes(self):
         self.assertEqual(self.client.get_hub_url("seo_audit", "de"), "https://0audit.com/de/tools/seo-audit/")
         self.assertEqual(self.client.get_hub_url("security_headers", "ru"), "https://0audit.com/ru/tools/security-headers-checker/")
+        self.assertEqual(self.client.get_hub_url("seo_audit", "zh"), "https://0audit.com/zh/tools/seo-audit/")
+        self.assertEqual(self.client.get_hub_url("ai_search", "ja"), "https://0audit.com/ja/tools/ai-search-readiness/")
 
     def test_optimal_security_headers(self):
         headers = {

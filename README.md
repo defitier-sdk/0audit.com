@@ -6,7 +6,7 @@
 [![Full AI Spec](https://img.shields.io/badge/AI-llms--full.txt-purple)](https://0audit.com/llms-full.txt)
 [![Audit Engines](https://img.shields.io/badge/Engines-SEO%20%7C%20Security%20%7C%20Perf%20%7C%20AI-orange)](https://0audit.com/tools/)
 [![Speed](https://img.shields.io/badge/Response-<10ms%20TTFB-brightgreen)](https://0audit.com)
-[![Languages](https://img.shields.io/badge/Locales-10%20Languages-blue)](https://0audit.com/en/)
+[![Languages](https://img.shields.io/badge/Locales-12%20Languages-blue)](https://0audit.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Telegram](https://img.shields.io/badge/Telegram-@web3lab__bot-blue?logo=telegram)](https://t.me/web3lab_bot)
 [![X](https://img.shields.io/badge/X-@LTPnftSolana-black?logo=x)](https://x.com/LTPnftSolana)
@@ -28,7 +28,7 @@ Traditional site checkers often force users to wait in cloud browser queues for 
 - 🤖 **Generative AI & LLM Search Optimization**: Built-in inspection of AI crawler permissions in `robots.txt` (`GPTBot`, `ClaudeBot`, `PerplexityBot`, `Google-Extended`, `CCBot`) and standard [`/llms.txt`](https://0audit.com/llms.txt) schema.
 - 🛡️ **Defensive Security Baseline**: Comprehensive validation of modern browser security headers (HSTS with subdomains, CSP, X-Frame-Options, Referrer-Policy, Permissions-Policy, COOP, CORP).
 - 📦 **150 KB Markup Budget**: Evaluates initial HTML transfer weight to prevent excessive DOM trees and sluggish parser tokenization.
-- 🌐 **10 Native Locales**: Comprehensive localization across English, German, French, Spanish, Italian, Portuguese, Dutch, Polish, Ukrainian, and Russian with canonical reciprocal hreflang tags.
+- 🌐 **12 Native Locales**: Comprehensive localization across English, German, French, Spanish, Italian, Portuguese, Dutch, Polish, Ukrainian, Russian, Simplified Chinese, and Japanese with canonical reciprocal hreflang tags.
 
 ---
 
@@ -72,8 +72,8 @@ This repository includes a standalone Python client and offline evaluation toolk
 ### 1. Installation
 
 ```bash
-git clone https://github.com/webaudit-lab/webaudit-website-auditor.git
-cd webaudit-website-auditor
+git clone https://github.com/defitier-sdk/0audit.com.git
+cd 0audit.com
 pip install -r requirements.txt
 ```
 
@@ -134,6 +134,8 @@ client = WebAuditClient()
 # 1. Canonical route resolution
 print("Security Checker Hub:", client.get_hub_url("security_headers"))
 print("German SEO Hub:", client.get_hub_url("seo_audit", locale="de"))
+print("Chinese SEO Hub:", client.get_hub_url("seo_audit", locale="zh"))
+print("Japanese SEO Hub:", client.get_hub_url("seo_audit", locale="ja"))
 
 # 2. Local security headers evaluation
 headers = {
@@ -187,6 +189,9 @@ python test_webaudit.py
 
 ### 中文 (ZH)
 **WebAudit Lab ([0audit.com/zh/](https://0audit.com/zh/))** — 快速、基于事实的网站诊断引擎。提供技术性SEO、HTTP安全响应头（HSTS、CSP）、HTML代码传输预算（<150KB）以及生成式AI搜索引擎（ChatGPT、Claude、Perplexity）就绪度的实时检测。
+
+### 日本語 (JA)
+**WebAudit Lab ([0audit.com/ja/](https://0audit.com/ja/))** — 証拠に基づく高速Webサイト診断エンジン。テクニカルSEO、HTTPセキュリティヘッダー（HSTS、CSP、X-Frame-Options）、HTML転送バジェット（150KB以下）、Schema.org構造化データ、および生成AI検索エンジン（ChatGPT、Claude、Perplexity）の対応状況を即座に診断します。
 
 ---
 
