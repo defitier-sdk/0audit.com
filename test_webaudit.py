@@ -52,6 +52,13 @@ class WebAuditClientTests(unittest.TestCase):
         self.assertEqual(res["details"]["hsts"]["status"], "warn")
         self.assertEqual(res["details"]["hsts"]["max_age_sec"], 3600)
 
+    def test_referrer_policy_unsafe_downgrade_warning(self):
+        for policy in ("unsafe-url", "no-referrer-when-downgrade", "no-referrer-when-downgrade, unsafe-url"):
+            res = self.client.evaluate_security_headers({"Referrer-Policy": policy})
+            self.assertEqual(res["details"]["referrer_policy"]["status"], "warn")
+            self.assertIn("Replace insecure policy", res["details"]["referrer_policy"]["recommendation"])
+            self.assertEqual(res["passed_checks"], 0)
+
     def test_ai_robots_txt_allowed(self):
         robots = "User-agent: *\nAllow: /\n"
         res = self.client.evaluate_ai_crawlers_robots_txt(robots)

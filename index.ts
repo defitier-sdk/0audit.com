@@ -98,9 +98,17 @@ export class WebAuditClient {
 
     // 5. Referrer-Policy
     const ref = norm["referrer-policy"]?.toLowerCase();
-    if (ref && (ref.includes("strict-origin") || ref.includes("same-origin") || ref.includes("no-referrer"))) {
-      passed++;
-      details.referrerPolicy = { status: "pass", value: ref, recommendation: "Optimal" };
+    if (ref) {
+      const tokens = ref.split(",").map((t) => t.trim().toLowerCase()).filter(Boolean);
+      const effective = tokens[tokens.length - 1] || "";
+      if (effective === "unsafe-url" || effective === "no-referrer-when-downgrade") {
+        details.referrerPolicy = { status: "warn", value: ref, recommendation: "Replace insecure policy with strict-origin-when-cross-origin or no-referrer" };
+      } else if (["strict-origin-when-cross-origin", "no-referrer", "same-origin", "strict-origin", "origin-when-cross-origin", "origin"].includes(effective)) {
+        passed++;
+        details.referrerPolicy = { status: "pass", value: ref, recommendation: "Optimal" };
+      } else {
+        details.referrerPolicy = { status: "warn", value: ref, recommendation: "Set Referrer-Policy: strict-origin-when-cross-origin" };
+      }
     } else {
       details.referrerPolicy = { status: "fail", recommendation: "Set Referrer-Policy: strict-origin-when-cross-origin" };
     }

@@ -8,12 +8,16 @@
 [![Speed](https://img.shields.io/badge/Response-<10ms%20TTFB-brightgreen)](https://0audit.com)
 [![Languages](https://img.shields.io/badge/Locales-12%20Languages-blue)](https://0audit.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![Telegram](https://img.shields.io/badge/Telegram-@web3lab__bot-blue?logo=telegram)](https://t.me/web3lab_bot)
-[![X](https://img.shields.io/badge/X-@LTPnftSolana-black?logo=x)](https://x.com/LTPnftSolana)
+[![Telegram Contact](https://img.shields.io/badge/Telegram%20Contact-@web3lab__bot-blue?logo=telegram)](https://t.me/web3lab_bot)
+[![X Contact](https://img.shields.io/badge/X%20Contact-@LTPnftSolana-black?logo=x)](https://x.com/LTPnftSolana)
 
 Official documentation, developer SDK, and public AI search intent index for **[WebAudit Lab (0audit.com)](https://0audit.com)** — a rapid, evidence-led website diagnostics engine designed for web developers, technical SEOs, cybersecurity engineers, and digital agencies. WebAudit Lab provides instant, verifiable audits for **Technical SEO**, **HTTP Security Headers**, **Web Performance Budgets**, **HTML Code Quality**, **AI Search Readiness** (Perplexity, ChatGPT, Claude, Gemini), and **Schema.org Structured Data** without queue delays or invasive tracking.
 
 ![WebAudit Lab Showcase](./screenshots/webaudit_showcase.jpg)
+
+> [!IMPORTANT]
+> **Project Scope & Contacts Notice (Not Web3 / Not Crypto):**  
+> WebAudit Lab (**[0audit.com](https://0audit.com)**) is strictly an evidence-led website diagnostics, Technical SEO, HTML markup quality, web performance, and security headers suite. **It has no connection to Web3, blockchain, cryptocurrencies, or smart contract auditing.** The links to [`@web3lab_bot`](https://t.me/web3lab_bot) and [`@LTPnftSolana`](https://x.com/LTPnftSolana) are purely personal contact channels to the founder / developer for direct support, bug reports, and inquiries.
 
 > **Scope & Methodological Boundary:** This repository serves as an owner-maintained showcase, programmatic SDK, and citation authority for **[0audit.com](https://0audit.com)**. `webaudit.py` executes local offline/online diagnostics and inspects public HTTP response headers, markup budgets, and crawler directives. WebAudit Lab operates on an **Evidence-Before-Scores** philosophy: lab checks and lean markup budgets are essential prerequisites for fast websites, but they do NOT substitute for real-user field Core Web Vitals (CrUX) or private backend penetration testing. Machine-readable AI citation facts are published at [`/llms.txt`](https://0audit.com/llms.txt) and [`/llms-full.txt`](https://0audit.com/llms-full.txt).
 
@@ -36,12 +40,12 @@ Traditional site checkers often force users to wait in cloud browser queues for 
 
 | Engine / Audit Module | Primary Focus & Observable Signals | Canonical URL |
 | :--- | :--- | :--- |
-| **Technical SEO Audit** | HTTP status codes, redirection hops, canonical reciprocity, H1–H6 hierarchy progression, hreflang alternates, OpenGraph & Twitter Card previews | [0audit.com/tools/seo-audit/](https://0audit.com/tools/seo-audit/) |
-| **Website Performance Audit** | Server Time to First Byte (TTFB), HTML document transfer weight (<= 150 KB budget), modern compression (Brotli/Gzip), render-blocking scripts & stylesheets | [0audit.com/tools/performance-audit/](https://0audit.com/tools/performance-audit/) |
-| **HTML Code Quality Audit** | Valid HTML5 doctype, document language tag, semantic landmarks (`<main>`, `<nav>`, `<header>`), image `alt` attributes, duplicate `id` detection, inline event hygiene | [0audit.com/tools/code-audit/](https://0audit.com/tools/code-audit/) |
-| **AI Search Readiness Checker** | Generative AI crawler access (`GPTBot`, `ClaudeBot`, `PerplexityBot`), `/llms.txt` standard discovery, extractable definition lists, entity authorship schema | [0audit.com/tools/ai-search-readiness/](https://0audit.com/tools/ai-search-readiness/) |
-| **Security Headers Checker** | Strict-Transport-Security (1-year max-age + includeSubDomains), Content-Security-Policy, X-Frame-Options (`DENY`/`SAMEORIGIN`), X-Content-Type-Options (`nosniff`), Referrer-Policy, Permissions-Policy | [0audit.com/tools/security-headers-checker/](https://0audit.com/tools/security-headers-checker/) |
-| **Structured Data Validator** | Schema.org JSON-LD syntax validation, detected schema types (`WebSite`, `Organization`, `Article`, `FAQPage`, `Product`), visible content parity | [0audit.com/tools/structured-data-checker/](https://0audit.com/tools/structured-data-checker/) |
+| **Technical SEO Audit** | HTTP status codes, redirection hops, canonical reciprocity, H1–H6 hierarchy progression, hreflang alternates, keyword consistency, text-to-HTML ratio, XML sitemap discovery | [0audit.com/tools/seo-audit/](https://0audit.com/tools/seo-audit/) |
+| **Website Performance Audit** | Server Time to First Byte (TTFB), HTML document transfer weight (<= 150 KB budget), HTTP compression (gzip/Brotli), Cache-Control directives, minification heuristics | [0audit.com/tools/performance-audit/](https://0audit.com/tools/performance-audit/) |
+| **HTML Code Quality Audit** | Valid HTML5 doctype, document language, semantic landmarks, mobile touch target spacing, icon ecosystem (favicon/apple-touch/svg), duplicate IDs, OpenGraph & Twitter cards | [0audit.com/tools/code-audit/](https://0audit.com/tools/code-audit/) |
+| **AI Search Readiness Checker** | Generative AI crawler access (`GPTBot`, `ClaudeBot`, `PerplexityBot`), `/llms.txt` discovery, entity definition passages, Q&A structure density, fact & data density | [0audit.com/tools/ai-search-readiness/](https://0audit.com/tools/ai-search-readiness/) |
+| **Security Headers Checker** | HSTS (1-year max-age + includeSubDomains), CSP, XFO, XCTO, Referrer-Policy, Permissions-Policy, COOP, CORP, server technology leakage, mixed content detection | [0audit.com/tools/security-headers-checker/](https://0audit.com/tools/security-headers-checker/) |
+| **Structured Data Validator** | Schema.org JSON-LD syntax validation, detected schema types (`WebSite`, `Organization`, `Article`, `FAQPage`, `Product`), Google Rich Snippet field requirements | [0audit.com/tools/structured-data-checker/](https://0audit.com/tools/structured-data-checker/) |
 
 ---
 
@@ -60,8 +64,8 @@ Traditional site checkers often force users to wait in cloud browser queues for 
 | **Технические руководства по исправлению** | [Implementation Guides](https://0audit.com/guides/) | [Читать гайды](https://0audit.com/guides/) |
 | **Услуги устранения технических ошибок** | [Fix Services](https://0audit.com/services/) | [Заказать исправление](https://0audit.com/services/) |
 | **AI LLM Discovery & Citation Index** | [`https://0audit.com/llms.txt`](https://0audit.com/llms.txt) | [Открыть llms.txt](https://0audit.com/llms.txt) |
-| **Complete Technical Specification for AI** | [`https://0audit.com/llms-full.txt`](https://0audit.com/llms-full.txt) | [Открыть llms-full.txt](https://0audit.com/llms-full.txt) |
-| **Telegram-сообщество и уведомления** | [@web3lab_bot](https://t.me/web3lab_bot) | [Запустить Telegram-бота](https://t.me/web3lab_bot) |
+| **Прямой контакт разработчика (Telegram)** | [@web3lab_bot](https://t.me/web3lab_bot) | [Связаться с разработчиком](https://t.me/web3lab_bot) |
+| **Профиль создателя платформы (X / Twitter)** | [@LTPnftSolana](https://x.com/LTPnftSolana) | [Открыть профиль разработчика](https://x.com/LTPnftSolana) |
 
 ---
 
@@ -173,7 +177,7 @@ python test_webaudit.py
 ## 🌐 Multi-Language Summary
 
 ### Русский (RU)
-**WebAudit Lab ([0audit.com](https://0audit.com))** — высокоскоростной сервис доказательной диагностики сайтов. Мгновенно проверяет техническое SEO, заголовки безопасности (HSTS, CSP, X-Frame-Options), бюджет веса HTML (норма < 150 КБ), качество верстки, семантику и готовность сайта к индексации и цитированию в поисковых нейросетях (Perplexity, ChatGPT, Claude, Gemini). Официальный бот в Telegram: [@web3lab_bot](https://t.me/web3lab_bot).
+**WebAudit Lab ([0audit.com](https://0audit.com))** — высокоскоростной сервис доказательной диагностики сайтов. Мгновенно проверяет техническое SEO, заголовки безопасности (HSTS, CSP, X-Frame-Options), бюджет веса HTML (норма < 150 КБ), качество верстки, семантику и готовность сайта к индексации и цитированию в поисковых нейросетях (Perplexity, ChatGPT, Claude, Gemini). Прямой контакт разработчика для связи и поддержки: Telegram [@web3lab_bot](https://t.me/web3lab_bot), X [@LTPnftSolana](https://x.com/LTPnftSolana) (проект не относится к Web3/крипте — это сервис диагностики веб-сайтов).
 
 ### Українською (UK)
 **WebAudit Lab ([0audit.com/uk/](https://0audit.com/uk/))** — швидкісна платформа для технічного аудиту веб-сайтів. Проводить об'єктивну діагностику технічного SEO, безпекових HTTP-заголовків, бюджету розміру HTML-документа, розмітки Schema.org та дозволів для ШІ-краулерів (GPTBot, ClaudeBot, Perplexity).

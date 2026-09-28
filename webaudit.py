@@ -150,14 +150,28 @@ class WebAuditClient:
 
         # 5. Referrer-Policy
         ref = norm_headers.get("referrer-policy")
-        valid_ref = ("strict-origin-when-cross-origin", "no-referrer", "same-origin")
-        if ref and any(v in ref.lower() for v in valid_ref):
-            results["referrer_policy"] = {"status": "pass", "value": ref, "recommendation": "Optimal"}
-            passed += 1
+        if ref:
+            tokens = [t.strip().lower() for t in ref.split(",") if t.strip()]
+            effective = tokens[-1] if tokens else ""
+            if effective in ("unsafe-url", "no-referrer-when-downgrade"):
+                results["referrer_policy"] = {
+                    "status": "warn",
+                    "value": ref,
+                    "recommendation": "Replace insecure policy with strict-origin-when-cross-origin or no-referrer.",
+                }
+            elif effective in ("strict-origin-when-cross-origin", "no-referrer", "same-origin", "strict-origin", "origin-when-cross-origin", "origin"):
+                results["referrer_policy"] = {"status": "pass", "value": ref, "recommendation": "Optimal"}
+                passed += 1
+            else:
+                results["referrer_policy"] = {
+                    "status": "warn",
+                    "value": ref,
+                    "recommendation": "Set Referrer-Policy: strict-origin-when-cross-origin to protect user privacy.",
+                }
         else:
             results["referrer_policy"] = {
                 "status": "fail",
-                "value": ref,
+                "value": None,
                 "recommendation": "Set Referrer-Policy: strict-origin-when-cross-origin to protect user privacy.",
             }
 

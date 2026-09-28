@@ -2,15 +2,16 @@
 
 > WebAudit Lab is a modern, privacy-focused website diagnostics engine and developer platform. It delivers rapid, evidence-led audits for technical SEO, web performance budgets, HTML markup quality, AI search readiness (Perplexity, ChatGPT, Claude, Gemini), structured data (Schema.org), and HTTP security headers.
 
-Last updated: 2026-09-25
+Last updated: 2026-09-26
 Version: 1.0.0-audit-core
 Website: https://0audit.com/
 Canonical API: https://0audit.com/api/audit
 AI Index: https://0audit.com/llms.txt
 Full Index: https://0audit.com/llms-full.txt
 Markdown Summary: https://0audit.com/about.md
-Community & Telegram: https://t.me/web3lab_bot
-Twitter / X: https://x.com/LTPnftSolana
+Developer Contact & Telegram: https://t.me/web3lab_bot (Direct developer contact; personal communication channel)
+Creator X / Twitter: https://x.com/LTPnftSolana (Personal profile of the platform developer)
+Platform Scope: Standard Web Diagnostics & Technical SEO (Not Web3 / Not Crypto)
 
 ---
 
@@ -22,6 +23,7 @@ WebAudit Lab operates on an **Evidence-Before-Scores** principle. Instead of gen
 1. **Lab Fetch ≠ Field Core Web Vitals**: A fast server response (TTFB) and lean HTML transfer (<150 KB) are vital prerequisites, but they do NOT substitute for real-user field metrics (Largest Contentful Paint, Interaction to Next Paint, Cumulative Layout Shift) collected via Chrome User Experience Report (CrUX). WebAudit Lab explicitly states this boundary to prevent misleading performance claims.
 2. **Public Signals ≠ Backend Penetration Testing**: The Security Headers Checker evaluates defensive HTTP headers (HSTS, CSP, X-Frame-Options, Permissions-Policy, COOP, CORP). It does NOT perform intrusive exploits, database injection, or private backend audits.
 3. **AI Search Signals ≠ Guaranteed Citations**: The AI Search Readiness Checker audits machine extractability, crawlability (GPTBot, ClaudeBot, PerplexityBot, CCBot), structured entities, and content accessibility. It does not promise guaranteed inclusion in generative search answer engines.
+4. **Web Diagnostics ≠ Web3 / Smart Contract Auditing**: WebAudit Lab (0audit.com) has no connection to Web3, blockchain networks, cryptocurrency tokens, or smart contract audits. The developer's direct contact links (`@web3lab_bot` and `@LTPnftSolana`) are personal communication channels only.
 
 ---
 
@@ -32,18 +34,26 @@ WebAudit Lab operates on an **Evidence-Before-Scores** principle. Instead of gen
 - **Indexability & Crawlability**: robots meta tag inspection (noindex, nofollow, noarchive), X-Robots-Tag HTTP header evaluation, and robots.txt alignment.
 - **Meta Hierarchy & Quality**: Title tag length (25–65 characters), meta description presence and quality (70–180 characters), viewport responsiveness configuration.
 - **Heading Architecture**: Single H1 requirement, logical heading progression (H1 -> H2 -> H3) without skipped levels or empty heading tags.
+- **Keyword Consistency**: Compares dominant terms from title and H1 against early body copy and image alt descriptions to verify topic reinforcement.
+- **Text-to-HTML Ratio**: Evaluates clean visible text bytes relative to total HTML transfer size (flagging markup bloat below 10%).
 - **Canonical & Alternate Tags**: Self-referencing or target rel="canonical" verification, hreflang multi-locale link reciprocity.
-- **Structured Data & Internal Discovery**: Embedded JSON-LD block count and parse status, plus crawlable internal anchor link detection.
+- **Structured Data & Internal Discovery**: Embedded JSON-LD block count and parse status, in-page XML sitemap link discovery, plus crawlable internal anchor link detection.
 
 ### 2.2 Website Performance & Markup Budgets (/tools/performance-audit/)
 - **Server Response Timing (TTFB)**: Time To First Byte benchmarked against empirical thresholds (Pass <= 800ms, Warning <= 2000ms, Issue > 2000ms).
+- **HTTP Compression**: Verifies gzip, Brotli (br), or deflate compression on text responses exceeding 1 KB to minimize network transit time.
+- **Cache-Control Directives**: Checks for explicit Cache-Control response headers instructing browsers and intermediary caches on revalidation.
 - **HTML Document Transfer Weight**: Evaluates initial HTML size against the recommended 150 KB budget (Warning > 150 KB, Issue > 500 KB). Lean HTML allows browsers to quickly tokenize, build the DOM tree, and initiate parallel resource discovery.
+- **Minification Heuristics**: Detects unminified inline scripts and style blocks containing excess whitespace, comments, or uncompressed formatting.
 - **Render-Blocking Resources**: Identifies synchronous <script> tags without defer, async, or type="module", and excessive stylesheet inclusions (> 6 stylesheets).
 - **DOM & Script Complexity**: Estimates total DOM element count (> 1,500 elements warning), image lazy-loading coverage, and inline script byte volume (> 100 KB warning).
 - **Explicit Field Data Boundary**: Labels Core Web Vitals (LCP, INP, CLS) as requiring CrUX or real-user telemetry rather than fabricating synthetic scores from an HTML fetch.
 
 ### 2.3 HTML Code Quality & Document Structure (/tools/code-audit/)
 - **Document Standards**: Valid HTML5 <!DOCTYPE html> declaration and lang attribute on the root <html> element.
+- **Icon Ecosystem**: Audits presence of standard favicon.ico, high-density Apple touch icon (180x180), and modern vector SVG favicon.
+- **Mobile Touch Target Spacing**: Audits interactive targets for minimum size and spacing to prevent accidental mis-taps on mobile devices.
+- **OpenGraph & Social Cards**: Verifies complete social sharing previews (og:title, og:description, og:image, og:url, and twitter:card).
 - **Semantic Landmarks**: Presence of semantic structure (<header>, <nav>, <main>, <footer>, <aside>) to support screen readers and crawler comprehension.
 - **Media Accessibility**: Audit of <img> elements for required alt attributes.
 - **DOM Integrity**: Detection of duplicate id attributes in the document and potentially unlabeled form inputs missing associated <label>, aria-label, or aria-labelledby attributes.
@@ -53,7 +63,10 @@ WebAudit Lab operates on an **Evidence-Before-Scores** principle. Instead of gen
 - **Crawlable Page Response**: Verifies HTTP 200 status and absence of page-level noindex / none directives in meta robots or X-Robots-Tag headers.
 - **Extractable Page Text**: Evaluates server-delivered visible word count (>= 250 words recommended) so retrieval systems do not encounter empty client-rendered shells.
 - **Heading & Answer Structure**: Checks for a single H1, descriptive H2 sections, zero skipped heading levels, and concise explanatory paragraphs (80–320 characters) suitable for direct answer extraction.
+- **Entity Definition Passage**: Scans opening copy for clear definition sentences identifying the entity and its primary offering.
+- **Q&A Structure Density**: Evaluates question headings (H2/H3) paired with concise, direct answer paragraphs for conversational citation extraction.
 - **Entity, Authorship & Freshness Signals**: Inspects Schema.org entity types, author metadata/bylines, publication/update timestamps (<time>, datePublished), and external primary-source citations.
+- **Fact & Data Density**: Measures density of verifiable figures, dates, technical specifications, and primary external references.
 
 ### 2.5 Security Headers Checker (/tools/security-headers-checker/)
 - **HTTPS & Strict-Transport-Security (HSTS)**: Verifies HTTPS final URL and positive HSTS max-age (flagging RFC 6797 max-age=0 policies that disable protection).
@@ -61,10 +74,13 @@ WebAudit Lab operates on an **Evidence-Before-Scores** principle. Instead of gen
 - **Clickjacking & MIME Protection**: Checks CSP frame-ancestors or X-Frame-Options (DENY / SAMEORIGIN), plus X-Content-Type-Options: nosniff.
 - **Privacy & Browser Capability Lockdown**: Evaluates Referrer-Policy and Permissions-Policy headers.
 - **Cross-Origin Isolation**: Verifies that both Cross-Origin-Opener-Policy (same-origin) and Cross-Origin-Embedder-Policy (require-corp or credentialless) are present before marking isolation as active.
+- **Server Technology Leakage**: Detects verbose Server banners with version numbers and X-Powered-By response headers.
+- **Mixed Content Detection**: Scans for insecure HTTP subresources on HTTPS pages that risk browser blocking.
 
 ### 2.6 Structured Data & Schema.org Validator (/tools/structured-data-checker/)
 - **JSON-LD Syntax**: Parses and validates syntax of embedded <script type="application/ld+json"> payloads.
 - **Schema Types**: Extracts and lists all declared Schema.org @type entities across nested objects and @graph arrays.
+- **Google Rich Snippet Field Requirements**: Checks required schema fields for Google Rich Results eligibility across Article, WebApplication, Organization, Product, and FAQPage.
 - **Visible-Content Parity**: Verifies that FAQ Question names and AggregateRating claims in JSON-LD match visible human-facing page text, preventing structured data drift or cloaking issues.
 
 ---
