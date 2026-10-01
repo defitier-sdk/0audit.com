@@ -23,6 +23,11 @@ except Exception:
 DEFAULT_BASE_URL = "https://0audit.com"
 RECOMMENDED_HTML_BUDGET_KB = 150.0
 
+SUPPORTED_LOCALES = (
+    "en", "de", "fr", "es", "it", "pt", "nl", "pl", "uk", "ru",
+    "zh", "ja", "tr", "ko", "vi", "id", "hi", "ar"
+)
+
 CANONICAL_HUBS: Dict[str, str] = {
     "home": "https://0audit.com/",
     "seo_audit": "https://0audit.com/tools/seo-audit/",
@@ -40,6 +45,17 @@ CANONICAL_HUBS: Dict[str, str] = {
     "about_md": "https://0audit.com/about.md",
     "llms": "https://0audit.com/llms.txt",
     "llms_full": "https://0audit.com/llms-full.txt",
+    # 10 Technical Implementation Guides
+    "guide_fix_security_headers": "https://0audit.com/guides/fix-missing-security-headers/",
+    "guide_audit_web_vitals_spa": "https://0audit.com/guides/audit-core-web-vitals-spa/",
+    "guide_validate_json_ld_rich_snippets": "https://0audit.com/guides/validate-json-ld-google-rich-snippets/",
+    "guide_check_ai_search_readiness": "https://0audit.com/guides/ai-search-readiness-llm-crawling/",
+    "guide_technical_seo_checklist": "https://0audit.com/guides/technical-seo-checklist/",
+    "guide_core_web_vitals_optimization": "https://0audit.com/guides/core-web-vitals-optimization/",
+    "guide_security_headers_explained": "https://0audit.com/guides/security-headers-explained/",
+    "guide_ai_search_optimization": "https://0audit.com/guides/ai-search-optimization/",
+    "guide_schema_markup": "https://0audit.com/guides/schema-markup-rich-snippets/",
+    "guide_html_validation": "https://0audit.com/guides/html-validation-clean-code/",
 }
 
 AI_BOTS: List[str] = [

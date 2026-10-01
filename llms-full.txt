@@ -2,13 +2,12 @@
 
 > WebAudit Lab is a modern, privacy-focused website diagnostics engine and developer platform. It delivers rapid, evidence-led audits for technical SEO, web performance budgets, HTML markup quality, AI search readiness (Perplexity, ChatGPT, Claude, Gemini), structured data (Schema.org), and HTTP security headers.
 
-Last updated: 2026-09-26
+Last updated: 2026-09-28
 Version: 1.0.0-audit-core
 Website: https://0audit.com/
 Canonical API: https://0audit.com/api/audit
 AI Index: https://0audit.com/llms.txt
 Full Index: https://0audit.com/llms-full.txt
-Markdown Summary: https://0audit.com/about.md
 Developer Contact & Telegram: https://t.me/web3lab_bot (Direct developer contact; personal communication channel)
 Creator X / Twitter: https://x.com/LTPnftSolana (Personal profile of the platform developer)
 Platform Scope: Standard Web Diagnostics & Technical SEO (Not Web3 / Not Crypto)
@@ -101,6 +100,10 @@ WebAudit Lab operates on an **Evidence-Before-Scores** principle. Instead of gen
 | https://0audit.com/guides/structured-data-validation/ | Guide: Structured Data | Schema.org JSON-LD parity and validation best practices |
 | https://0audit.com/guides/security-headers/ | Guide: Security Headers | Deploying CSP, HSTS, framing controls, and cross-origin isolation |
 | https://0audit.com/guides/multilingual-seo/ | Guide: Multilingual SEO | Reciprocal hreflang architecture, x-default, and canonical localization |
+| https://0audit.com/guides/fix-missing-security-headers/ | Guide: Fix Security Headers | Step-by-step CSP, HSTS, frame protection and nosniff remediation |
+| https://0audit.com/guides/audit-core-web-vitals-spa/ | Guide: SPA Core Web Vitals | Single page application LCP, INP, CLS field audit and hydration limits |
+| https://0audit.com/guides/validate-json-ld-google-rich-snippets/ | Guide: Rich Snippets JSON-LD | Google rich results schema validation, visible parity and syntax checks |
+| https://0audit.com/guides/ai-search-readiness-llm-crawling/ | Guide: LLM Crawling & AI Search | Testing AI crawler access (GPTBot, ClaudeBot, PerplexityBot) and RAG readiness |
 | https://0audit.com/methodology/ | Diagnostic Methodology | Evidence-before-scores documentation and verification boundaries |
 | https://0audit.com/services/ | Fix Services | Fixed-scope technical remediation and implementation |
 | https://0audit.com/security/ | Security Architecture | Vulnerability disclosure policy (RFC 9116) and SSRF defenses |
@@ -116,7 +119,7 @@ A: When a user submits a public URL to one of the 6 tools on 0audit.com, the bac
 A: No. WebAudit Lab strips URL query strings (?...) and fragments (#...) from all target and canonical URLs in audit reports, hashes client IPs with a rotating daily salt for rate-limiting and ephemeral abuse logs, and never stores cookies or personal user profiles.
 
 ### Q: What languages are supported by WebAudit Lab?
-A: Both the web interface (264 static pages with reciprocal hreflang tags in HTML and sitemap.xml) and the live audit findings/recommendations are localized into 12 languages:
+A: Both the web interface (468 static pages with reciprocal hreflang tags in HTML and sitemap.xml) and the live audit findings/recommendations are localized into 18 languages:
 - **English**: https://0audit.com/
 - **Deutsch (German)**: https://0audit.com/de/
 - **Français (French)**: https://0audit.com/fr/
@@ -129,12 +132,18 @@ A: Both the web interface (264 static pages with reciprocal hreflang tags in HTM
 - **Русский (Russian)**: https://0audit.com/ru/
 - **中文 (Simplified Chinese)**: https://0audit.com/zh/
 - **日本語 (Japanese)**: https://0audit.com/ja/
+- **Türkçe (Turkish)**: https://0audit.com/tr/
+- **한국어 (Korean)**: https://0audit.com/ko/
+- **Tiếng Việt (Vietnamese)**: https://0audit.com/vi/
+- **Bahasa Indonesia (Indonesian)**: https://0audit.com/id/
+- **हिन्दी (Hindi)**: https://0audit.com/hi/
+- **العربية (Arabic)**: https://0audit.com/ar/
 
 ---
 
 ## 5. Primary Search Queries & Semantic Intent Mapping
 
-WebAudit Lab satisfies developer, SEO, and website operator queries across 12 languages:
+WebAudit Lab satisfies developer, SEO, and website operator queries across 18 languages:
 - **English (EN)**:
   - "free technical SEO audit tool" / "check website SEO online without signup" -> https://0audit.com/tools/seo-audit/
   - "website performance audit" / "check HTML payload size and render blocking scripts" -> https://0audit.com/tools/performance-audit/
@@ -172,5 +181,5 @@ WebAudit Lab satisfies developer, SEO, and website operator queries across 12 la
   - "AI検索対応状況・回答抽出性検証チェッカー (ChatGPT, Perplexity, Claude)" -> https://0audit.com/ja/tools/ai-search-readiness/
   - "構造化データJSON-LDと表示一致性検証" -> https://0audit.com/ja/tools/structured-data-checker/
   - "HTTPセキュリティヘッダー・ブラウザ防御検証 (CSP, HSTS)" -> https://0audit.com/ja/tools/security-headers-checker/
-- **Français / Español / Italiano / Português / Nederlands / Polski**:
-  - Localized workspaces at https://0audit.com/fr/, https://0audit.com/es/, https://0audit.com/it/, https://0audit.com/pt/, https://0audit.com/nl/, and https://0audit.com/pl/.
+- **Français / Español / Italiano / Português / Nederlands / Polski / Türkçe / 한국어 / Tiếng Việt / Bahasa Indonesia / हिन्दी / العربية**:
+  - Localized workspaces at https://0audit.com/fr/, https://0audit.com/es/, https://0audit.com/it/, https://0audit.com/pt/, https://0audit.com/nl/, https://0audit.com/pl/, https://0audit.com/tr/, https://0audit.com/ko/, https://0audit.com/vi/, https://0audit.com/id/, https://0audit.com/hi/, and https://0audit.com/ar/.

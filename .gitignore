@@ -7,3 +7,4 @@ dist/
 .env.local
 .DS_Store
 *.log
+proxies.txt

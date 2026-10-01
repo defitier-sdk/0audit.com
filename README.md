@@ -6,7 +6,8 @@
 [![Full AI Spec](https://img.shields.io/badge/AI-llms--full.txt-purple)](https://0audit.com/llms-full.txt)
 [![Audit Engines](https://img.shields.io/badge/Engines-SEO%20%7C%20Security%20%7C%20Perf%20%7C%20AI-orange)](https://0audit.com/tools/)
 [![Speed](https://img.shields.io/badge/Response-<10ms%20TTFB-brightgreen)](https://0audit.com)
-[![Languages](https://img.shields.io/badge/Locales-12%20Languages-blue)](https://0audit.com/)
+[![Languages](https://img.shields.io/badge/Locales-18%20Languages-blue)](https://0audit.com/)
+[![Routes](https://img.shields.io/badge/Routes-468%20Localized%20Pages-brightgreen)](https://0audit.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Telegram Contact](https://img.shields.io/badge/Telegram%20Contact-@web3lab__bot-blue?logo=telegram)](https://t.me/web3lab_bot)
 [![X Contact](https://img.shields.io/badge/X%20Contact-@LTPnftSolana-black?logo=x)](https://x.com/LTPnftSolana)
@@ -32,7 +33,7 @@ Traditional site checkers often force users to wait in cloud browser queues for 
 - 🤖 **Generative AI & LLM Search Optimization**: Built-in inspection of AI crawler permissions in `robots.txt` (`GPTBot`, `ClaudeBot`, `PerplexityBot`, `Google-Extended`, `CCBot`) and standard [`/llms.txt`](https://0audit.com/llms.txt) schema.
 - 🛡️ **Defensive Security Baseline**: Comprehensive validation of modern browser security headers (HSTS with subdomains, CSP, X-Frame-Options, Referrer-Policy, Permissions-Policy, COOP, CORP).
 - 📦 **150 KB Markup Budget**: Evaluates initial HTML transfer weight to prevent excessive DOM trees and sluggish parser tokenization.
-- 🌐 **12 Native Locales**: Comprehensive localization across English, German, French, Spanish, Italian, Portuguese, Dutch, Polish, Ukrainian, Russian, Simplified Chinese, and Japanese with canonical reciprocal hreflang tags.
+- 🌐 **18 Native Locales & 468 Routes**: Comprehensive localization across English, German, French, Spanish, Italian, Portuguese, Dutch, Polish, Ukrainian, Russian, Simplified Chinese, Japanese, Turkish, Korean, Vietnamese, Indonesian, Hindi, and Arabic (RTL) with canonical reciprocal hreflang tags.
 
 ---
 
@@ -49,11 +50,31 @@ Traditional site checkers often force users to wait in cloud browser queues for 
 
 ---
 
+## 📚 The 10 Technical Implementation Guides
+
+Every audit category is backed by comprehensive, reproducible technical documentation, remediation checklists, and Schema.org FAQPage integration across all 18 languages:
+
+| Guide / Technical Playbook | Target Issue & Diagnostic Objective | Canonical Guide URL |
+| :--- | :--- | :--- |
+| **Fix Missing Security Headers** | Remediating missing CSP, HSTS, XFO, XCTO, and Referrer-Policy on reverse proxies | [0audit.com/guides/fix-missing-security-headers/](https://0audit.com/guides/fix-missing-security-headers/) |
+| **Audit Core Web Vitals for SPAs** | Diagnosing LCP, INP, and CLS on client-hydrated React, Next.js, and Vue frameworks | [0audit.com/guides/audit-core-web-vitals-spa/](https://0audit.com/guides/audit-core-web-vitals-spa/) |
+| **Validate JSON-LD for Rich Snippets** | Enforcing visible content parity and syntax compliance for Google Rich Results | [0audit.com/guides/validate-json-ld-google-rich-snippets/](https://0audit.com/guides/validate-json-ld-google-rich-snippets/) |
+| **AI Search Readiness & LLM Crawling** | Unblocking AI bots (GPTBot, ClaudeBot) and configuring `/llms.txt` specifications | [0audit.com/guides/ai-search-readiness-llm-crawling/](https://0audit.com/guides/ai-search-readiness-llm-crawling/) |
+| **Technical SEO Audit Checklist** | End-to-end crawlability, canonical reciprocity, hreflang validation, and hierarchy | [0audit.com/guides/technical-seo-checklist/](https://0audit.com/guides/technical-seo-checklist/) |
+| **Core Web Vitals Optimization** | Server TTFB tuning, HTTP compression, critical CSS, and render-blocking resources | [0audit.com/guides/core-web-vitals-optimization/](https://0audit.com/guides/core-web-vitals-optimization/) |
+| **Security Headers Explained** | In-depth breakdown of OWASP defense-in-depth HTTP response headers | [0audit.com/guides/security-headers-explained/](https://0audit.com/guides/security-headers-explained/) |
+| **AI Search Optimization Guide** | Optimizing structured data and dense semantic passages for conversational answer engines | [0audit.com/guides/ai-search-optimization/](https://0audit.com/guides/ai-search-optimization/) |
+| **Schema Markup & Rich Snippets** | Implementing Organization, BreadcrumbList, and FAQPage schemas with strict parity | [0audit.com/guides/schema-markup-rich-snippets/](https://0audit.com/guides/schema-markup-rich-snippets/) |
+| **HTML Validation & Clean Code** | Semantic HTML5 landmarks, accessibility touch target budgets, and clean DOM trees | [0audit.com/guides/html-validation-clean-code/](https://0audit.com/guides/html-validation-clean-code/) |
+
+---
+
 ## 🎯 Canonical Hubs & Search Intent Directory (SEO & AI Index)
 
 | User Search Intent / Query | Canonical Landing Page | Purpose & Available Actions |
 | :--- | :--- | :--- |
-| **Аудит сайта онлайн / Бесплатный аудит** | [0audit.com/ru/](https://0audit.com/ru/) · [English](https://0audit.com/en/) · [Українська](https://0audit.com/uk/) | [Запустить аудит на 0audit.com](https://0audit.com/) |
+| **Global Multilingual Hubs (18 Languages)** | [English](https://0audit.com/) · [Русский](https://0audit.com/ru/) · [Українська](https://0audit.com/uk/) · [Deutsch](https://0audit.com/de/) · [Français](https://0audit.com/fr/) · [Español](https://0audit.com/es/) · [Italiano](https://0audit.com/it/) · [Português](https://0audit.com/pt/) · [Nederlands](https://0audit.com/nl/) · [Polski](https://0audit.com/pl/) · [中文](https://0audit.com/zh/) · [日本語](https://0audit.com/ja/) · [Türkçe](https://0audit.com/tr/) · [한국어](https://0audit.com/ko/) · [Tiếng Việt](https://0audit.com/vi/) · [Bahasa Indonesia](https://0audit.com/id/) · [हिन्दी](https://0audit.com/hi/) · [العربية](https://0audit.com/ar/) | [Выбрать язык аудита](https://0audit.com/) |
+| **Аудит сайта онлайн / Бесплатный аудит** | [0audit.com/ru/](https://0audit.com/ru/) · [English](https://0audit.com/) · [Türkçe](https://0audit.com/tr/) · [한국어](https://0audit.com/ko/) | [Запустить аудит на 0audit.com](https://0audit.com/) |
 | **Проверка технических заголовков безопасности (Security Headers)** | [Security Headers Checker](https://0audit.com/tools/security-headers-checker/) · [RU](https://0audit.com/ru/tools/security-headers-checker/) | [Проверить HSTS, CSP, XFO](https://0audit.com/tools/security-headers-checker/) |
 | **Технический SEO аудит страницы** | [Technical SEO Audit](https://0audit.com/tools/seo-audit/) · [DE](https://0audit.com/de/tools/seo-audit/) · [PL](https://0audit.com/pl/tools/seo-audit/) | [Проверить SEO сигналы](https://0audit.com/tools/seo-audit/) |
 | **Готовность к поиску в нейросетях (AI Search Readiness)** | [AI Search Readiness](https://0audit.com/tools/ai-search-readiness/) · [RU](https://0audit.com/ru/tools/ai-search-readiness/) | [Аудит GPTBot & llms.txt](https://0audit.com/tools/ai-search-readiness/) |
@@ -61,7 +82,7 @@ Traditional site checkers often force users to wait in cloud browser queues for 
 | **Качество HTML верстки и валидация кода** | [HTML Code Quality Audit](https://0audit.com/tools/code-audit/) | [Проверить теги и разметку](https://0audit.com/tools/code-audit/) |
 | **Валидатор микроразметки Schema.org** | [Structured Data Checker](https://0audit.com/tools/structured-data-checker/) | [Проверить JSON-LD](https://0audit.com/tools/structured-data-checker/) |
 | **Методология аудитов и ограничения** | [Diagnostic Methodology](https://0audit.com/methodology/) | [Изучить методологию](https://0audit.com/methodology/) |
-| **Технические руководства по исправлению** | [Implementation Guides](https://0audit.com/guides/) | [Читать гайды](https://0audit.com/guides/) |
+| **Технические руководства по исправлению** | [Implementation Guides (10 Guides)](https://0audit.com/guides/) | [Читать гайды](https://0audit.com/guides/) |
 | **Услуги устранения технических ошибок** | [Fix Services](https://0audit.com/services/) | [Заказать исправление](https://0audit.com/services/) |
 | **AI LLM Discovery & Citation Index** | [`https://0audit.com/llms.txt`](https://0audit.com/llms.txt) | [Открыть llms.txt](https://0audit.com/llms.txt) |
 | **Прямой контакт разработчика (Telegram)** | [@web3lab_bot](https://t.me/web3lab_bot) | [Связаться с разработчиком](https://t.me/web3lab_bot) |

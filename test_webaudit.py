@@ -19,6 +19,20 @@ class WebAuditClientTests(unittest.TestCase):
         self.assertEqual(self.client.get_hub_url("security_headers", "ru"), "https://0audit.com/ru/tools/security-headers-checker/")
         self.assertEqual(self.client.get_hub_url("seo_audit", "zh"), "https://0audit.com/zh/tools/seo-audit/")
         self.assertEqual(self.client.get_hub_url("ai_search", "ja"), "https://0audit.com/ja/tools/ai-search-readiness/")
+        # New 6 locales
+        self.assertEqual(self.client.get_hub_url("seo_audit", "tr"), "https://0audit.com/tr/tools/seo-audit/")
+        self.assertEqual(self.client.get_hub_url("security_headers", "ko"), "https://0audit.com/ko/tools/security-headers-checker/")
+        self.assertEqual(self.client.get_hub_url("performance_audit", "vi"), "https://0audit.com/vi/tools/performance-audit/")
+        self.assertEqual(self.client.get_hub_url("code_audit", "id"), "https://0audit.com/id/tools/code-audit/")
+        self.assertEqual(self.client.get_hub_url("structured_data", "hi"), "https://0audit.com/hi/tools/structured-data-checker/")
+        self.assertEqual(self.client.get_hub_url("ai_search", "ar"), "https://0audit.com/ar/tools/ai-search-readiness/")
+
+    def test_guide_hubs(self):
+        self.assertEqual(self.client.get_hub_url("guide_fix_security_headers"), "https://0audit.com/guides/fix-missing-security-headers/")
+        self.assertEqual(self.client.get_hub_url("guide_audit_web_vitals_spa"), "https://0audit.com/guides/audit-core-web-vitals-spa/")
+        self.assertEqual(self.client.get_hub_url("guide_validate_json_ld_rich_snippets"), "https://0audit.com/guides/validate-json-ld-google-rich-snippets/")
+        self.assertEqual(self.client.get_hub_url("guide_check_ai_search_readiness"), "https://0audit.com/guides/ai-search-readiness-llm-crawling/")
+        self.assertEqual(self.client.get_hub_url("guide_fix_security_headers", "tr"), "https://0audit.com/tr/guides/fix-missing-security-headers/")
 
     def test_optimal_security_headers(self):
         headers = {

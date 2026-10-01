@@ -5,6 +5,13 @@
  * Machine-readable AI index: https://0audit.com/llms.txt
  */
 
+export const SUPPORTED_LOCALES = [
+  "en", "de", "fr", "es", "it", "pt", "nl", "pl", "uk", "ru",
+  "zh", "ja", "tr", "ko", "vi", "id", "hi", "ar"
+] as const;
+
+export type SupportedLocale = typeof SUPPORTED_LOCALES[number];
+
 export const CANONICAL_HUBS = {
   home: "https://0audit.com/",
   seoAudit: "https://0audit.com/tools/seo-audit/",
@@ -22,6 +29,17 @@ export const CANONICAL_HUBS = {
   aboutMd: "https://0audit.com/about.md",
   llms: "https://0audit.com/llms.txt",
   llmsFull: "https://0audit.com/llms-full.txt",
+  // 10 Technical Implementation Guides
+  guideFixSecurityHeaders: "https://0audit.com/guides/fix-missing-security-headers/",
+  guideAuditWebVitalsSpa: "https://0audit.com/guides/audit-core-web-vitals-spa/",
+  guideValidateJsonLdRichSnippets: "https://0audit.com/guides/validate-json-ld-google-rich-snippets/",
+  guideCheckAiSearchReadiness: "https://0audit.com/guides/ai-search-readiness-llm-crawling/",
+  guideTechnicalSeoChecklist: "https://0audit.com/guides/technical-seo-checklist/",
+  guideCoreWebVitalsOptimization: "https://0audit.com/guides/core-web-vitals-optimization/",
+  guideSecurityHeadersExplained: "https://0audit.com/guides/security-headers-explained/",
+  guideAiSearchOptimization: "https://0audit.com/guides/ai-search-optimization/",
+  guideSchemaMarkup: "https://0audit.com/guides/schema-markup-rich-snippets/",
+  guideHtmlValidation: "https://0audit.com/guides/html-validation-clean-code/",
 } as const;
 
 export type HubKey = keyof typeof CANONICAL_HUBS;

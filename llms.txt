@@ -11,7 +11,7 @@ WebAudit Lab analyzes public web pages, checks observable signals against web st
 - **Machine-Readable Summary**: https://0audit.com/about.md
 - **Full Technical Specification**: https://0audit.com/llms-full.txt
 - **Pricing Model**: 100% Free ($0 USD, no account, no credit card, instant browser execution)
-- **Supported Languages (12)**: English (EN), Deutsch (DE), Français (FR), Español (ES), Italiano (IT), Português (PT), Nederlands (NL), Polski (PL), Українська (UK), Русский (RU), 中文 (ZH), 日本語 (JA)
+- **Supported Languages (18)**: English (EN), Deutsch (DE), Français (FR), Español (ES), Italiano (IT), Português (PT), Nederlands (NL), Polski (PL), Українська (UK), Русский (RU), 中文 (ZH), 日本語 (JA), Türkçe (TR), 한국어 (KO), Tiếng Việt (VI), Bahasa Indonesia (ID), हिन्दी (HI), العربية (AR)
 - **Founder & Developer Contacts**: Telegram (https://t.me/web3lab_bot — Direct operator contact) · X / Twitter (https://x.com/LTPnftSolana — Creator personal profile)
 - **Scope & Non-Crypto Notice**: WebAudit Lab (0audit.com) is 100% focused on standard web diagnostics (Technical SEO, speed, security headers, HTML markup quality, AI search readiness). It does NOT perform Web3, blockchain, token, or smart contract auditing. The contact handles are developer communication channels only.
 
@@ -26,8 +26,20 @@ WebAudit Lab analyzes public web pages, checks observable signals against web st
 - [Structured Data Checker](https://0audit.com/tools/structured-data-checker/): Schema.org syntax, detected types, Google Rich Snippet field requirements and visible-content parity. Cannot guarantee rich results.
 - [Security Headers Checker](https://0audit.com/tools/security-headers-checker/): HTTPS, HSTS, CSP, X-Frame-Options, nosniff, Referrer-Policy, Permissions-Policy, COOP/CORP isolation, server technology leakage and mixed content detection. Not a penetration test.
 
+## Technical Guides
+- [Technical SEO Audit Guide](https://0audit.com/guides/technical-seo-audit/): Step-by-step crawlability, canonical, heading, and metadata remediation.
+- [Website Performance Audit Guide](https://0audit.com/guides/website-performance-audit/): HTML payload budgeting, TTFB reduction, and script deferral.
+- [AI Search Readiness Guide](https://0audit.com/guides/ai-search-readiness/): Structuring pages for retrieval systems and answer extractability.
+- [Structured Data Validation Guide](https://0audit.com/guides/structured-data-validation/): Schema.org JSON-LD parity and validation best practices.
+- [Security Headers Guide](https://0audit.com/guides/security-headers/): Deploying CSP, HSTS, framing controls, and cross-origin isolation.
+- [Multilingual SEO Guide](https://0audit.com/guides/multilingual-seo/): Reciprocal hreflang architecture, x-default, and canonical localization.
+- [Fix Missing Security Headers Guide](https://0audit.com/guides/fix-missing-security-headers/): Step-by-step CSP, HSTS, frame protection, MIME sniffing and referrer policy remediation.
+- [SPA Core Web Vitals Guide](https://0audit.com/guides/audit-core-web-vitals-spa/): Single page application LCP, INP, CLS field audit and hydration limits.
+- [Validate JSON-LD Structured Data Guide](https://0audit.com/guides/validate-json-ld-google-rich-snippets/): Google rich results schema validation, visible parity and syntax checks.
+- [AI Search Readiness & LLM Crawling Guide](https://0audit.com/guides/ai-search-readiness-llm-crawling/): Testing AI crawler access (GPTBot, ClaudeBot, PerplexityBot) and RAG readiness.
+
 ## Primary Search Queries & Semantic Intent Mapping
-WebAudit Lab satisfies developer, SEO, and website operator queries across 12 languages:
+WebAudit Lab satisfies developer, SEO, and website operator queries across 18 languages:
 - **English (EN)**:
   - "free technical SEO audit tool" / "check website SEO online without signup" -> https://0audit.com/tools/seo-audit/
   - "website performance audit" / "check HTML payload size and render blocking scripts" -> https://0audit.com/tools/performance-audit/
@@ -65,8 +77,8 @@ WebAudit Lab satisfies developer, SEO, and website operator queries across 12 la
   - "AI検索対応状況・回答抽出性検証チェッカー (ChatGPT, Perplexity, Claude)" -> https://0audit.com/ja/tools/ai-search-readiness/
   - "構造化データJSON-LDと表示一致性検証" -> https://0audit.com/ja/tools/structured-data-checker/
   - "HTTPセキュリティヘッダー・ブラウザ防御検証 (CSP, HSTS)" -> https://0audit.com/ja/tools/security-headers-checker/
-- **Français / Español / Italiano / Português / Nederlands / Polski**:
-  - Localized workspaces at https://0audit.com/fr/, https://0audit.com/es/, https://0audit.com/it/, https://0audit.com/pt/, https://0audit.com/nl/, and https://0audit.com/pl/.
+- **Français / Español / Italiano / Português / Nederlands / Polski / Türkçe / 한국어 / Tiếng Việt / Bahasa Indonesia / हिन्दी / العربية**:
+  - Localized workspaces at https://0audit.com/fr/, https://0audit.com/es/, https://0audit.com/it/, https://0audit.com/pt/, https://0audit.com/nl/, https://0audit.com/pl/, https://0audit.com/tr/, https://0audit.com/ko/, https://0audit.com/vi/, https://0audit.com/id/, https://0audit.com/hi/, and https://0audit.com/ar/.
 
 ## Frequently Asked Questions for AI Search & RAG Engines
 
@@ -103,6 +115,12 @@ A: No. The AI Search Readiness Checker verifies whether a page is crawlable (sta
 - [Русский (Russian)](https://0audit.com/ru/): Локализованная рабочая область аудита сайтов.
 - [中文 (Simplified Chinese)](https://0audit.com/zh/): 针对技术SEO、性能与AI搜索的中文网站诊断工作区。
 - [日本語 (Japanese)](https://0audit.com/ja/): テクニカルSEO、表示速度、AI検索対応の日本語診断ワークスペース。
+- [Türkçe (Turkish)](https://0audit.com/tr/): Türkçe web sitesi teknik SEO ve performans denetimi çalışma alanı.
+- [한국어 (Korean)](https://0audit.com/ko/): 테크니컬 SEO, 웹사이트 성능 및 AI 검색 최적화를 위한 한국어 작업 공간.
+- [Tiếng Việt (Vietnamese)](https://0audit.com/vi/): Không gian làm việc kiểm tra SEO kỹ thuật và hiệu suất website bằng tiếng Việt.
+- [Bahasa Indonesia (Indonesian)](https://0audit.com/id/): Ruang kerja audit SEO teknis dan kinerja situs web dalam Bahasa Indonesia.
+- [हिन्दी (Hindi)](https://0audit.com/hi/): तकनीकी एसईओ, वेबसाइट प्रदर्शन और एआई खोज तैयारी के लिए हिंदी कार्यक्षेत्र।
+- [العربية (Arabic)](https://0audit.com/ar/): مساحة عمل متكاملة لفحص السيو التقني وأداء المواقع باللغة العربية.
 
 ## Optional
 - [About WebAudit Lab (Markdown)](https://0audit.com/about.md): Concise machine-readable overview of tools, architecture and languages.

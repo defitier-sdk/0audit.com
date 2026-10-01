@@ -22,5 +22,5 @@ WebAudit Lab (`0audit.com`) is a free, zero-account website diagnostics platform
 
 ### Key Capabilities
 - **100% Free & No Registration**: Instant browser-based diagnostics with zero signup or paywall.
-- **12 Localized Languages**: Full native interface and localized audit reports in English (`/`), German (`/de/`), French (`/fr/`), Spanish (`/es/`), Italian (`/it/`), Portuguese (`/pt/`), Dutch (`/nl/`), Polish (`/pl/`), Ukrainian (`/uk/`), Russian (`/ru/`), Simplified Chinese (`/zh/`), and Japanese (`/ja/`).
+- **18 Localized Languages**: Full native interface and localized audit reports in English (`/`), German (`/de/`), French (`/fr/`), Spanish (`/es/`), Italian (`/it/`), Portuguese (`/pt/`), Dutch (`/nl/`), Polish (`/pl/`), Ukrainian (`/uk/`), Russian (`/ru/`), Simplified Chinese (`/zh/`), Japanese (`/ja/`), Turkish (`/tr/`), Korean (`/ko/`), Vietnamese (`/vi/`), Indonesian (`/id/`), Hindi (`/hi/`), and Arabic (`/ar/`).
 - **Privacy & SSRF Hardened**: Strips URL query strings and fragments from reports, blocks private/loopback IP ranges and DNS rebinding, and retains zero personal data.
