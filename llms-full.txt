@@ -2,7 +2,7 @@
 
 > WebAudit Lab is a modern, privacy-focused website diagnostics engine and developer platform. It delivers rapid, evidence-led audits for technical SEO, web performance budgets, HTML markup quality, AI search readiness (Perplexity, ChatGPT, Claude, Gemini), structured data (Schema.org), and HTTP security headers.
 
-Last updated: 2026-09-28
+Last updated: 2026-10-02
 Version: 1.0.0-audit-core
 Website: https://0audit.com/
 Canonical API: https://0audit.com/api/audit

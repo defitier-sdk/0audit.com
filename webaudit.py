@@ -45,6 +45,8 @@ CANONICAL_HUBS: Dict[str, str] = {
     "about_md": "https://0audit.com/about.md",
     "llms": "https://0audit.com/llms.txt",
     "llms_full": "https://0audit.com/llms-full.txt",
+    "sitemap": "https://0audit.com/sitemap.xml",
+    "robots": "https://0audit.com/robots.txt",
     # 10 Technical Implementation Guides
     "guide_fix_security_headers": "https://0audit.com/guides/fix-missing-security-headers/",
     "guide_audit_web_vitals_spa": "https://0audit.com/guides/audit-core-web-vitals-spa/",
@@ -59,12 +61,15 @@ CANONICAL_HUBS: Dict[str, str] = {
 }
 
 AI_BOTS: List[str] = [
+    "OAI-SearchBot",
     "GPTBot",
     "ChatGPT-User",
     "ClaudeBot",
     "anthropic-ai",
     "PerplexityBot",
     "Google-Extended",
+    "Applebot",
+    "Meta-ExternalAgent",
     "CCBot",
     "Bytespider",
 ]
@@ -81,7 +86,7 @@ class WebAuditClient:
         if key not in CANONICAL_HUBS:
             raise KeyError(f"Unknown hub '{key}'. Available: {list(CANONICAL_HUBS.keys())}")
         canonical = CANONICAL_HUBS[key]
-        if locale == "en" or key in ("llms", "llms_full", "about_md"):
+        if locale == "en" or key in ("llms", "llms_full", "about_md", "sitemap", "robots"):
             return canonical
         # Multi-language canonical route
         path = urllib.parse.urlparse(canonical).path.lstrip("/")

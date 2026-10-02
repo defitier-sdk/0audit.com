@@ -13,6 +13,8 @@ class WebAuditClientTests(unittest.TestCase):
         self.assertEqual(self.client.get_hub_url("ai_search"), "https://0audit.com/tools/ai-search-readiness/")
         self.assertEqual(self.client.get_hub_url("llms"), "https://0audit.com/llms.txt")
         self.assertEqual(self.client.get_hub_url("about_md"), "https://0audit.com/about.md")
+        self.assertEqual(self.client.get_hub_url("sitemap"), "https://0audit.com/sitemap.xml")
+        self.assertEqual(self.client.get_hub_url("robots"), "https://0audit.com/robots.txt")
 
     def test_localized_routes(self):
         self.assertEqual(self.client.get_hub_url("seo_audit", "de"), "https://0audit.com/de/tools/seo-audit/")

@@ -8,6 +8,7 @@
 [![Speed](https://img.shields.io/badge/Response-<10ms%20TTFB-brightgreen)](https://0audit.com)
 [![Languages](https://img.shields.io/badge/Locales-18%20Languages-blue)](https://0audit.com/)
 [![Routes](https://img.shields.io/badge/Routes-468%20Localized%20Pages-brightgreen)](https://0audit.com/)
+[![Sitemap](https://img.shields.io/badge/Sitemap-XML%20Index-orange)](https://0audit.com/sitemap.xml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Telegram Contact](https://img.shields.io/badge/Telegram%20Contact-@web3lab__bot-blue?logo=telegram)](https://t.me/web3lab_bot)
 [![X Contact](https://img.shields.io/badge/X%20Contact-@LTPnftSolana-black?logo=x)](https://x.com/LTPnftSolana)
@@ -85,6 +86,8 @@ Every audit category is backed by comprehensive, reproducible technical document
 | **Технические руководства по исправлению** | [Implementation Guides (10 Guides)](https://0audit.com/guides/) | [Читать гайды](https://0audit.com/guides/) |
 | **Услуги устранения технических ошибок** | [Fix Services](https://0audit.com/services/) | [Заказать исправление](https://0audit.com/services/) |
 | **AI LLM Discovery & Citation Index** | [`https://0audit.com/llms.txt`](https://0audit.com/llms.txt) | [Открыть llms.txt](https://0audit.com/llms.txt) |
+| **XML Sitemap Index & Alternate Links** | [`https://0audit.com/sitemap.xml`](https://0audit.com/sitemap.xml) | [Открыть sitemap.xml](https://0audit.com/sitemap.xml) |
+| **Search & AI Crawler Directives (robots.txt)** | [`https://0audit.com/robots.txt`](https://0audit.com/robots.txt) | [Открыть robots.txt](https://0audit.com/robots.txt) |
 | **Прямой контакт разработчика (Telegram)** | [@web3lab_bot](https://t.me/web3lab_bot) | [Связаться с разработчиком](https://t.me/web3lab_bot) |
 | **Профиль создателя платформы (X / Twitter)** | [@LTPnftSolana](https://x.com/LTPnftSolana) | [Открыть профиль разработчика](https://x.com/LTPnftSolana) |
 
